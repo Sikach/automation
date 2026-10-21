@@ -1,0 +1,23 @@
+[project]
+name = "pytest-tests"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pyserial>=3.5",
+]
+
+[project.scripts]
+pytest-tests = "pytest_tests:main"
+
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pyserial>=3.5",
+    "pytest>=9.1.1",
+    "python-dotenv>=1.2.4",
+]
